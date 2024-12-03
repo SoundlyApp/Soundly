@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074269365093",
+    "project_id": "soundly-1f6fa",
+    "storage_bucket": "soundly-1f6fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074269365093:android:0b31026985de361882778c",
+        "android_client_info": {
+          "package_name": "com.example.soundly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9pQLn930tFiMHkQVpxE72Tp4CdCoVP94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
