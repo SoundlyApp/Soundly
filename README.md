@@ -11,6 +11,8 @@
 
 ### Description
 
+For reference, the entire application is in the TEST folder.
+
 Soundly is a social media application that fuses Instagram and Spotify into one. Users are allowed to make posts followed by a Spotify song and their specific mood, allowing for a personalized emotion for each song. Get recommendations from your friends or view what songs other people like!
 
 ### App Evaluation
