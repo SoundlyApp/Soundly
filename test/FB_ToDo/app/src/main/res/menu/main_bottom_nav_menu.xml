@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Home"
+        android:color="@android:color/black"
+        android:state_checked="true"/>
+    <item android:id="@+id/nav_pending" android:title="Create" android:icon="@drawable/create"  android:state_checked="false" android:color="@android:color/black"/>
+    <item android:id="@+id/nav_completed" android:title="Profile" android:icon="@drawable/person" android:state_checked="false" android:color="@android:color/black"/>
+</menu>

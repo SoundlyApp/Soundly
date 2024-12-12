@@ -6,6 +6,7 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 
+
 ## Overview
 
 ### Description
@@ -107,17 +108,22 @@ Soundly is a social media application that fuses Instagram and Spotify into one.
 
 [Add screenshot of your Project Board with three milestones visible in
 this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://imgur.com/deZD8Yp" width=600>
 
 ## Issue cards
 
 - [Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 - [Add screenshot of your Project Board with the issues that you're working on in the **NEXT sprint**. It should include issues for next unit with assigned owners.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
+<img src="https://imgur.com/GXCQyZ6" width=600>
+
 ## Issues worked on this sprint
 
 - List the issues you completed this sprint
 - [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+
+Have mercy on me, I am taking 18 credits and studying for finals. <3
+<img src="https://imgur.com/nOZOP6U" width=600>
 
 <br>
 
@@ -127,15 +133,29 @@ this section]
 
 [Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
+<img src="https://i.imgur.com/6PuVHMU.png" width=600>
+
 ## Completed user stories
 
 - List the completed user stories from this unit
+	
+	- Used Login
+	- User Register
+	- Home page
+	- Create post
+	- User can click on post to listen to music
+	- User can logout
+	- User can see their own posts
+
 - List any pending user stories / any user stories you decided to cut
 from the original requirements
 
 [Add video/gif of your current application that shows build progress]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+https://www.youtube.com/watch?v=QPUmF46h6Ho&feature=youtu.be
 
 ## App Demo Video
 
-- Embed the YouTube/Vimeo link of your Completed Demo Day prep video
+- Embed the YouTube/Vimeo link of your Completed Demo Day prep vide
+
+https://www.youtube.com/watch?v=QPUmF46h6Ho&feature=youtu.be
