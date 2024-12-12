@@ -42,10 +42,46 @@ class ToDoRepository(context: Context) {
         }
     }
 
+    fun getUserTodos(): Flow<List<Todo>> {
+        val userId = auth.currentUser?.uid ?: throw IllegalStateException("User is not logged in")
+        return db.todoDao().getUserTodos(userId).onEach { todos ->
+            Log.d(tag, "Syncing pending todos from Firestore for user: $userId")
+            try {
+                val collection = firestore.collection("todos")
+                val snapshot = collection.get().await()
+                val fetchedTodos = snapshot.documents.map { document ->
+                    document.toObject(Todo::class.java)!!.apply { firestoreId = document.id }
+                }
+                db.todoDao().insertAll(fetchedTodos)
+                Log.d(tag, "Synced pending todos from Firestore to Room")
+            } catch (e: Exception) {
+                Log.e(tag, "Failed to sync pending todos from Firestore: ${e.message}", e)
+            }
+        }
+    }
+
+    fun getAllTodos(): Flow<List<Todo>> {
+        val userId = auth.currentUser?.uid ?: throw IllegalStateException("User is not logged in")
+        return db.todoDao().getAllTodos().onEach { todos ->
+            Log.d(tag, "Syncing pending todos from Firestore for user: $userId")
+            try {
+                val collection = firestore.collection("todos")
+                val snapshot = collection.get().await()
+                val fetchedTodos = snapshot.documents.map { document ->
+                    document.toObject(Todo::class.java)!!.apply { firestoreId = document.id }
+                }
+                db.todoDao().insertAll(fetchedTodos)
+                Log.d(tag, "Synced pending todos from Firestore to Room")
+            } catch (e: Exception) {
+                Log.e(tag, "Failed to sync pending todos from Firestore: ${e.message}", e)
+            }
+        }
+    }
+
     // Fetch completed todos
     fun getCompletedTodos(): Flow<List<Todo>> {
         val userId = auth.currentUser?.uid ?: throw IllegalStateException("User is not logged in")
-        return db.todoDao().getCompletedTodos(userId).onEach { todos ->
+        return db.todoDao().getUserTodos(userId).onEach { todos ->
             Log.d(tag, "Syncing completed todos from Firestore for user: $userId")
             try {
                 val collection = firestore.collection("todos")

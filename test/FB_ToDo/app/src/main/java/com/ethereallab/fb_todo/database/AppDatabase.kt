@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.ethereallab.fb_todo.dao.TodoDao
 import com.ethereallab.fb_todo.models.Todo
 
-@Database(entities = [Todo::class], version = 1, exportSchema = false)
+@Database(entities = [Todo::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun todoDao(): TodoDao

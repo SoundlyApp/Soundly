@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.ethereallab.fb_todo.MainActivity
+import com.ethereallab.fb_todo.R
 import com.ethereallab.fb_todo.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,6 +24,15 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         auth = FirebaseAuth.getInstance()
+
+        val switchRegister = binding.SwitchRegister
+
+        switchRegister.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, RegisterFragment())
+            transaction.addToBackStack(null) // Optional: Adds this transaction to the back stack
+            transaction.commit()
+        }
 
         binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString().trim()

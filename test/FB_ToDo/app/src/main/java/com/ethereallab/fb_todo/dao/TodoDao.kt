@@ -19,6 +19,13 @@ interface TodoDao {
     @Update
     suspend fun update(todo: Todo)
 
+    @Query ("SELECT * FROM Todo")
+    fun getAllTodos() : Flow<List<Todo>>
+
+    // Return pending todos as a Flow, so it will emit updates automatically
+    @Query("SELECT * FROM Todo WHERE userId = :userId")
+    fun getUserTodos(userId: String): Flow<List<Todo>>
+
     // Return pending todos as a Flow, so it will emit updates automatically
     @Query("SELECT * FROM Todo WHERE isDone = 0 AND userId = :userId")
     fun getPendingTodos(userId: String): Flow<List<Todo>>

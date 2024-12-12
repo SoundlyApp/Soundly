@@ -2,6 +2,8 @@ package com.ethereallab.fb_todo
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.StrictMode
+import android.os.StrictMode.ThreadPolicy
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.room.Room
@@ -12,6 +14,7 @@ import com.ethereallab.fb_todo.fragments.HomeFragment
 import com.ethereallab.fb_todo.fragments.PendingFragment
 import com.google.firebase.auth.FirebaseAuth
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
@@ -20,6 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val policy = ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         // Initialize View Binding
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -31,7 +37,8 @@ class MainActivity : AppCompatActivity() {
             applicationContext,
             AppDatabase::class.java,
             "todo_database"
-        ).build()
+        )
+            .build()
 
         // Setup bottom navigation and default fragment
         setupBottomNavigation()
