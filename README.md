@@ -132,7 +132,7 @@ Have mercy on me, I am taking 18 credits and studying for finals. <3
 
 [Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
-<img src="https://i.imgur.com/kiaEHHD.png" width=600>
+<img src="https://i.imgur.com/6PuVHMU.png" width=600>
 
 ## Completed user stories
 
@@ -140,13 +140,21 @@ Have mercy on me, I am taking 18 credits and studying for finals. <3
 	
 	- Used Login
 	- User Register
+	- Home page
+	- Create post
+	- User can click on post to listen to music
+	- User can logout
+	- User can see their own posts
 
 - List any pending user stories / any user stories you decided to cut
 from the original requirements
 
 [Add video/gif of your current application that shows build progress]
-<img src="https://i.imgur.com/kiaEHHD.png" width=600>
+
+https://www.youtube.com/watch?v=QPUmF46h6Ho&feature=youtu.be
 
 ## App Demo Video
 
 - Embed the YouTube/Vimeo link of your Completed Demo Day prep vide
+
+https://www.youtube.com/watch?v=QPUmF46h6Ho&feature=youtu.be
